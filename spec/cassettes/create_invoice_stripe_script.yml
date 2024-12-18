@@ -1,0 +1,901 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://fakestoreapi.com/carts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:01:56 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"3a8-j3C8983spvK8GpaSYa+SyYlAS2A"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=cm0evDJ16c%2BOc9%2BtVVbvizww3xDsmq%2Bz8WGQby%2FI7ZPRSbn7YYV5VvHFg3Mn3RbbcgPaW%2FONHO8lgBvt%2B%2BOWQdWME2OZrlVsTlHJQyV3749P4ZTpLLfAQdXgrLbvE3nudmSo"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0022fa043fd-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113374&min_rtt=112976&rtt_var=32466&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2805&recv_bytes=792&delivery_rate=33402&cwnd=252&unsent_bytes=0&cid=2343b864d6e36cd1&ts=2614&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":1,"userId":1,"date":"2020-03-02T00:00:00.000Z","products":[{"productId":1,"quantity":4},{"productId":2,"quantity":1},{"productId":3,"quantity":6}],"__v":0},{"id":2,"userId":1,"date":"2020-01-02T00:00:00.000Z","products":[{"productId":2,"quantity":4},{"productId":1,"quantity":10},{"productId":5,"quantity":2}],"__v":0},{"id":3,"userId":2,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":1,"quantity":2},{"productId":9,"quantity":1}],"__v":0},{"id":4,"userId":3,"date":"2020-01-01T00:00:00.000Z","products":[{"productId":1,"quantity":4}],"__v":0},{"id":5,"userId":3,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":7,"quantity":1},{"productId":8,"quantity":1}],"__v":0},{"id":6,"userId":4,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":10,"quantity":2},{"productId":12,"quantity":3}],"__v":0},{"id":7,"userId":8,"date":"2020-03-01T00:00:00.000Z","products":[{"productId":18,"quantity":1}],"__v":0}]'
+  recorded_at: Wed, 18 Dec 2024 14:01:56 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:01:57 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=MC0Pe%2Fzv1xIEIj5JpSPEI%2BhEV08%2B9FmvGtH05Kb0jLlmqd%2FQwZ4BOxeVdsiYp5MMVPJt47epNvolxvK9CcBfNUwEV8eN5YdVW31538lQ6KF9RfBllX%2FwI32zadwqoQp99THa"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb014af95430d-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=119266&min_rtt=113493&rtt_var=46683&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2806&recv_bytes=794&delivery_rate=33755&cwnd=252&unsent_bytes=0&cid=793463e7b6223722&ts=353&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"-37.3159","long":"81.1496"},"city":"kilcoole","street":"new
+        road","number":7682,"zipcode":"12926-3874"},"id":1,"email":"john@gmail.com","username":"johnd","password":"m38rmF$","name":{"firstname":"john","lastname":"doe"},"phone":"1-570-236-7033","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:01:57 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:01 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"12d-rQ3vazNILlcEdp3VtaYW0Rr1+SY"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=2KafwE2s049gklcvrKg6i62RoXAlfqKs8uwty0kLvEjpPDQN85n2%2F%2B%2F0VCPZxa1%2FgdZfMwgTjKhrM4nXY%2BY%2BlMSTFedDeSShpHLp8%2FejJsaxbLKrvF4xhgqGzJui8GbCYfdu"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb019282018ea-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=115080&min_rtt=114287&rtt_var=33518&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2807&recv_bytes=794&delivery_rate=32555&cwnd=252&unsent_bytes=0&cid=8b6c5800cd82117f&ts=3905&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"-37.3159","long":"81.1496"},"city":"kilcoole","street":"Lovers
+        Ln","number":7267,"zipcode":"12926-3874"},"id":2,"email":"morrison@gmail.com","username":"mor_2314","password":"83r5^_","name":{"firstname":"david","lastname":"morrison"},"phone":"1-570-236-7033","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:02:01 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:02 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"128-QWLW0942EG8Wj+7FYrSRxCYClWk"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=7NR4YU1dC7VFrlFDq7bAXPR7wX4ELnql8tMl9nt6ZGcUlAsCspK%2B2RBbGfPsFh1S4vWd%2FXNQr1%2Fc%2BLOxhbVtBuNO4oMfd5iZUB2CAHAS4JZJQDURBz9u8IZOcBWvmRR%2B0GXz"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb033ca618c87-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113132&min_rtt=112997&rtt_var=32015&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2807&recv_bytes=794&delivery_rate=33729&cwnd=252&unsent_bytes=0&cid=65a864b0fff210cc&ts=652&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"40.3467","long":"-30.1310"},"city":"Cullman","street":"Frances
+        Ct","number":86,"zipcode":"29567-1452"},"id":3,"email":"kevin@gmail.com","username":"kevinryan","password":"kev02937@","name":{"firstname":"kevin","lastname":"ryan"},"phone":"1-567-094-1345","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:02:02 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:06 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"12b-c2a5YBSp49xXLsiODFTSryzh2fs"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=yd8WUg5clRVg%2F4S40bArzRfBnG9wMJ%2FXZTPPyp4KU3mvCecw9a837%2FEQg%2FKxCa2338tmG8YWiYz1jMLFoaeJzIRrWbmDmJMJZO1JVZrqcRGDRe5X1%2B4gA0T%2FAUJynVKiyQzv"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb03a18ce8c72-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113099&min_rtt=112956&rtt_var=42646&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2806&recv_bytes=794&delivery_rate=33573&cwnd=252&unsent_bytes=0&cid=c8a767eaa8d9e113&ts=3846&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"50.3467","long":"-20.1310"},"city":"San
+        Antonio","street":"Hunters Creek Dr","number":6454,"zipcode":"98234-1734"},"id":4,"email":"don@gmail.com","username":"donero","password":"ewedon","name":{"firstname":"don","lastname":"romer"},"phone":"1-765-789-6734","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:02:07 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:11 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"128-3aSVvpfMvimb8VISgwkh0SjSttY"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=am5YzVh47XKUcgdMRc3nerfxIUhEQYHNo9oh0l4RMjHM4XBIHQaL9mbDsCjg5g9B4XHY8O33Xxbo8wl4S%2Bx2iZ0g797jxmN%2BUsp1MK9me%2FkJ9PLJproFX9nYv4WEsecfp%2BPc"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0545d840f59-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=112759&min_rtt=112068&rtt_var=32718&sent=5&recv=8&lost=0&retrans=0&sent_bytes=2806&recv_bytes=794&delivery_rate=33302&cwnd=252&unsent_bytes=0&cid=3430c9f089106745&ts=4559&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"40.3467","long":"-40.1310"},"city":"san
+        Antonio","street":"adams St","number":245,"zipcode":"80796-1234"},"id":5,"email":"derek@gmail.com","username":"derek","password":"jklg*_56","name":{"firstname":"derek","lastname":"powell"},"phone":"1-956-001-1945","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:02:11 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"12c-qh6raI/EWS3a5DDlu8tTdvjmcN0"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=1%2FF1wPKEcPUPVgbKAW1GoVIAK6qiv6UD08QlGSOT3KOgGjCwp%2BwqX9AWENGw%2FS037yfGBfK0sZnOQ3suVrQo2Z5unJCSI2xKIlfKSdJyJ6zreyqtFsHvFLom3tumxfrUgk%2B%2F"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb07308b04303-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113750&min_rtt=112817&rtt_var=24512&sent=5&recv=8&lost=0&retrans=0&sent_bytes=2807&recv_bytes=794&delivery_rate=33424&cwnd=252&unsent_bytes=0&cid=e5a69313c8925f32&ts=358&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"20.1677","long":"-10.6789"},"city":"el
+        paso","street":"prospect st","number":124,"zipcode":"12346-0456"},"id":6,"email":"david_r@gmail.com","username":"david_r","password":"3478*#54","name":{"firstname":"david","lastname":"russell"},"phone":"1-678-345-9856","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:02:12 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/users/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"127-rM7MA5ark1sNtXw3mbmqC2YA4Cg"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=xBFtv1rx5MZd2FgEsBUDM1eGI%2BTYEw6orx3%2Fbl5y4AifzwrsNqsr16l2DLh73UM6FxaRyksAyoIEjSq1tAYYbQfdUMDW42KaPRWu%2FpMU%2FYO33o1HvpWiZ4sUoAZrNiN6Kyte"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0777e3518ea-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113657&min_rtt=113584&rtt_var=32073&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2806&recv_bytes=794&delivery_rate=33634&cwnd=252&unsent_bytes=0&cid=f4129c4207133e44&ts=4349&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"address":{"geolocation":{"lat":"10.3456","long":"20.6419"},"city":"fresno","street":"saddle
+        st","number":1342,"zipcode":"96378-0245"},"id":7,"email":"miriam@gmail.com","username":"snyder","password":"f238&@*$","name":{"firstname":"miriam","lastname":"snyder"},"phone":"1-123-943-0563","__v":0}'
+  recorded_at: Wed, 18 Dec 2024 14:02:17 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:21 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"16c-MMdrqY6N0sTiefLdsgtBej9eunY"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=37ckiepjt7gVKPyVU%2Buy%2FZw71qmKdTNhpu4DNYOBBVAKZtJLTPHUah6L%2F4Nh6bSXtlgY%2BMCQ%2F1qS1F4RR8kO1qUdxiqNuttV208PDlkfNobyi5jdbogrCFruq52nfSTKVTFW"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0a66dc8c360-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113393&min_rtt=112767&rtt_var=42735&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2806&recv_bytes=797&delivery_rate=33972&cwnd=222&unsent_bytes=0&cid=a250c82ea449d55c&ts=1450&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your
+        perfect pack for everyday use and walks in the forest. Stash your laptop (up
+        to 15 inches) in the padded sleeve, your everyday","category":"men''s clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg","rating":{"rate":3.9,"count":120}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:21 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:22 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"239-bLDSJo+O3FjSlzUr879oE3z3US8"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2BkBtSmvz080y86TOchbhvShmCs5FT3MJwuoY3bqWD5wYNoG5jClv3BjZLHh8lnIUIJmRrD%2BSPTF5aYPBY9STgQsKDvWUA1UsjNoJrFQHqkkBDkI3f6sKB8YuZIvxVI3bq6bS"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0b1a86e8cb7-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113062&min_rtt=112667&rtt_var=43040&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2807&recv_bytes=797&delivery_rate=33074&cwnd=240&unsent_bytes=0&cid=85b67dd619635bcb&ts=255&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":2,"title":"Mens Casual Premium Slim Fit T-Shirts ","price":22.3,"description":"Slim-fitting
+        style, contrast raglan long sleeve, three-button henley placket, light weight
+        & soft fabric for breathable and comfortable wearing. And Solid stitched shirts
+        with round neck made for durability and a great fit for casual fashion wear
+        and diehard baseball fans. The Henley style round neckline includes a three-button
+        placket.","category":"men''s clothing","image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg","rating":{"rate":4.1,"count":259}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:22 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:26 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"1f7-sp1VJ3nFjCQkeyuDKaa7fYzPNXg"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=hD9j0zsc58XnVdYIJd1RuXRbScf%2BcM2D%2Fy1ZQ4N7aav7blF1JQ3lcL84gsGNN2wDlbJ18AxWHuIFfylIdt07ezDHgh2pVCmEVl5Qyt7OtaGpkwsWHm1AslQy%2FgUF0BguIbI3"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0b57c0b80e2-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=112568&min_rtt=112567&rtt_var=42215&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2806&recv_bytes=797&delivery_rate=34030&cwnd=252&unsent_bytes=0&cid=fc6189f3a629e00a&ts=3963&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":3,"title":"Mens Cotton Jacket","price":55.99,"description":"great
+        outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such
+        as working, hiking, camping, mountain/rock climbing, cycling, traveling or
+        other outdoors. Good gift choice for you or your family member. A warm hearted
+        love to Father, husband or son in this thanksgiving or Christmas Day.","category":"men''s
+        clothing","image":"https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg","rating":{"rate":4.7,"count":500}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:26 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:27 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"1c4-yV39eLSyZctGOOmgynRocvEzFjQ"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=VFG1jxFWAUGHoh59AdDEQqyWxRjVTxMxYGSha%2BIiZV8Hrq%2B1re5ZIW8Dv%2BFNwO8Np0BKp2DcrIB4ibfggprlojmIdl15YxGoTNo%2BuH83RV9um2MR960IxscvPkKTb7oClHOk"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0d06af642da-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113609&min_rtt=113523&rtt_var=24078&sent=5&recv=8&lost=0&retrans=0&sent_bytes=2807&recv_bytes=797&delivery_rate=33664&cwnd=252&unsent_bytes=0&cid=c4d786e8684fac4d&ts=260&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":5,"title":"John Hardy Women''s Legends Naga Gold & Silver Dragon
+        Station Chain Bracelet","price":695,"description":"From our Legends Collection,
+        the Naga was inspired by the mythical water dragon that protects the ocean''s
+        pearl. Wear facing inward to be bestowed with love and abundance, or outward
+        for protection.","category":"jewelery","image":"https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":4.6,"count":400}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:27 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:32 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"216-pJCSnAiTwbywhj/v6QyxNtLZRc0"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=QMxS4rVFp%2BeoNHrQHhf580BNVTF2VBRc7KqOrms7BYzpxNGj8yIQkB9R%2B9VrR9HWCoQm4sYa6VOqIsJwJzqe2N2TtFxLRhnOuV9ORNRVjcHlMei1mayzyCJJzT%2FKB4WhMWHJ"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0d43b7cc32e-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=112735&min_rtt=112460&rtt_var=24172&sent=5&recv=8&lost=0&retrans=0&sent_bytes=2805&recv_bytes=797&delivery_rate=33754&cwnd=233&unsent_bytes=0&cid=b8379836648db314&ts=4251&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6OSwidGl0bGUiOiJXRCAyVEIgRWxlbWVudHMgUG9ydGFibGUgRXh0ZXJuYWwgSGFyZCBEcml2ZSAtIFVTQiAzLjAgIiwicHJpY2UiOjY0LCJkZXNjcmlwdGlvbiI6IlVTQiAzLjAgYW5kIFVTQiAyLjAgQ29tcGF0aWJpbGl0eSBGYXN0IGRhdGEgdHJhbnNmZXJzIEltcHJvdmUgUEMgUGVyZm9ybWFuY2UgSGlnaCBDYXBhY2l0eTsgQ29tcGF0aWJpbGl0eSBGb3JtYXR0ZWQgTlRGUyBmb3IgV2luZG93cyAxMCwgV2luZG93cyA4LjEsIFdpbmRvd3MgNzsgUmVmb3JtYXR0aW5nIG1heSBiZSByZXF1aXJlZCBmb3Igb3RoZXIgb3BlcmF0aW5nIHN5c3RlbXM7IENvbXBhdGliaWxpdHkgbWF5IHZhcnkgZGVwZW5kaW5nIG9uIHVzZXLigJlzIGhhcmR3YXJlIGNvbmZpZ3VyYXRpb24gYW5kIG9wZXJhdGluZyBzeXN0ZW0iLCJjYXRlZ29yeSI6ImVsZWN0cm9uaWNzIiwiaW1hZ2UiOiJodHRwczovL2Zha2VzdG9yZWFwaS5jb20vaW1nLzYxSUJCVkp2U0RMLl9BQ19TWTg3OV8uanBnIiwicmF0aW5nIjp7InJhdGUiOjMuMywiY291bnQiOjIwM319
+  recorded_at: Wed, 18 Dec 2024 14:02:32 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:32 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"16d-qTR0d8mKeFXf4BNQZ3HqeuIY5nI"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=p9zZUVQasm79a%2BD1TE3IT1Y54Mqn2XN76a3CXDawRTtwFsUm3x8OHzGa17SFZ4ryXEq7rByui72ThKX0JInNdSJSt2Yq1C924j9lAPPo3vZinL2gZyJECuZMRGYRutQPcxsf"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0f1dac00c82-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=142847&min_rtt=115380&rtt_var=80063&sent=5&recv=8&lost=0&retrans=0&sent_bytes=2806&recv_bytes=797&delivery_rate=16469&cwnd=252&unsent_bytes=0&cid=16883316a08d9716&ts=373&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":7,"title":"White Gold Plated Princess","price":9.99,"description":"Classic
+        Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to
+        spoil your love more for Engagement, Wedding, Anniversary, Valentine''s Day...","category":"jewelery","image":"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":3,"count":400}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:32 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:33 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"139-R1j///FJ/+1UUQYmJytd7qZVrQU"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=TH1s485N36jn9lEZkyAtoKzkZVJzVVfYyaK2jSdkf4NFTTSwafZI97oyrfacab1OhGshZ9yCAEDaqL0wHjSshun%2FSh8azLSqw1UK8ziWEq%2F75IyE7Yjb9dM77rKK5KVRG%2FBy"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0f5ae70c46d-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=119771&min_rtt=115235&rtt_var=29037&sent=5&recv=8&lost=0&retrans=0&sent_bytes=2807&recv_bytes=797&delivery_rate=33203&cwnd=252&unsent_bytes=0&cid=ed493764a0972d43&ts=328&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":8,"title":"Pierced Owl Rose Gold Plated Stainless Steel Double","price":10.99,"description":"Rose
+        Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel","category":"jewelery","image":"https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg","rating":{"rate":1.9,"count":100}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:33 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:37 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"2d2-QzYw+X+hXsi2K/VFAJ3/XdI9Dbc"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lwzuLyabShyl7fZDRC1kaDG8VIYQmqynaxwZU%2Bc12L0gGHNkttpVQ3o8b8PnnNBFWJAwssyVrcFx3yKHeyf24g9NHGmFKp2eL%2F1JRMBgenfSeGY4Ikh%2FOJwFBIk3zsyc6VZx"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb0f9fd3541c0-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113373&min_rtt=113142&rtt_var=42891&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2805&recv_bytes=798&delivery_rate=33315&cwnd=242&unsent_bytes=0&cid=c477ccfb5bb34a94&ts=3443&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTAsInRpdGxlIjoiU2FuRGlzayBTU0QgUExVUyAxVEIgSW50ZXJuYWwgU1NEIC0gU0FUQSBJSUkgNiBHYi9zIiwicHJpY2UiOjEwOSwiZGVzY3JpcHRpb24iOiJFYXN5IHVwZ3JhZGUgZm9yIGZhc3RlciBib290IHVwLCBzaHV0ZG93biwgYXBwbGljYXRpb24gbG9hZCBhbmQgcmVzcG9uc2UgKEFzIGNvbXBhcmVkIHRvIDU0MDAgUlBNIFNBVEEgMi414oCdIGhhcmQgZHJpdmU7IEJhc2VkIG9uIHB1Ymxpc2hlZCBzcGVjaWZpY2F0aW9ucyBhbmQgaW50ZXJuYWwgYmVuY2htYXJraW5nIHRlc3RzIHVzaW5nIFBDTWFyayB2YW50YWdlIHNjb3JlcykgQm9vc3RzIGJ1cnN0IHdyaXRlIHBlcmZvcm1hbmNlLCBtYWtpbmcgaXQgaWRlYWwgZm9yIHR5cGljYWwgUEMgd29ya2xvYWRzIFRoZSBwZXJmZWN0IGJhbGFuY2Ugb2YgcGVyZm9ybWFuY2UgYW5kIHJlbGlhYmlsaXR5IFJlYWQvd3JpdGUgc3BlZWRzIG9mIHVwIHRvIDUzNU1CL3MvNDUwTUIvcyAoQmFzZWQgb24gaW50ZXJuYWwgdGVzdGluZzsgUGVyZm9ybWFuY2UgbWF5IHZhcnkgZGVwZW5kaW5nIHVwb24gZHJpdmUgY2FwYWNpdHksIGhvc3QgZGV2aWNlLCBPUyBhbmQgYXBwbGljYXRpb24uKSIsImNhdGVnb3J5IjoiZWxlY3Ryb25pY3MiLCJpbWFnZSI6Imh0dHBzOi8vZmFrZXN0b3JlYXBpLmNvbS9pbWcvNjFVN1Qxa29RcUwuX0FDX1NYNjc5Xy5qcGciLCJyYXRpbmciOnsicmF0ZSI6Mi45LCJjb3VudCI6NDcwfX0=
+  recorded_at: Wed, 18 Dec 2024 14:02:37 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"184-eGUAi74z1q6zrOQZR0p9meC/nPE"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bDieAP7493eV58tUUJTIc0HBVVTHMWid%2F%2Fi46l4JVPeqWlCQGOIDSKZQACrrwZaDBJ%2B3%2FE0HJh4Q48Q0b1JEM8ic1z%2B%2BcbnwvoPaq25tY5wQq2eRqOaJcEH86qETFtNg%2Bt77"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb111bd918c65-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113543&min_rtt=112530&rtt_var=44225&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2806&recv_bytes=798&delivery_rate=31756&cwnd=245&unsent_bytes=0&cid=bd15a64bc6863081&ts=4447&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":12,"title":"WD 4TB Gaming Drive Works with Playstation 4 Portable
+        External Hard Drive","price":114,"description":"Expand your PS4 gaming experience,
+        Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year
+        manufacturer''s limited warranty","category":"electronics","image":"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg","rating":{"rate":4.8,"count":400}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:42 GMT
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/18
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 18 Dec 2024 14:02:42 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"18f-fh8XpQ86vX0/xuyK+UrasGHHR7w"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=59SMKR3ukc9uADcxWJOb5wKvbJqUkk11tc%2BVQb%2BcUUFi%2FskU74OR5C0WE8aC%2B0xCxsmatACxCfjhtn5yXs8vFFgAGuTehHwDqjLJdhiKfGOVULVNgIpPzteQPqlXaTpPROQT"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f3fb12fac82c360-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=113201&min_rtt=113180&rtt_var=42486&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2805&recv_bytes=798&delivery_rate=33796&cwnd=222&unsent_bytes=0&cid=4cb783fafb91483b&ts=253&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":18,"title":"MBJ Women''s Solid Short Sleeve Boat Neck V ","price":9.85,"description":"95%
+        RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric
+        with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching
+        on bottom hem","category":"women''s clothing","image":"https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg","rating":{"rate":4.7,"count":130}}'
+  recorded_at: Wed, 18 Dec 2024 14:02:42 GMT
+recorded_with: VCR 6.2.0
