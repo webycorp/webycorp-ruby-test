@@ -8,3 +8,4 @@ config/settings/*.local.yml
 coverage/
 spec/examples.txt
 .idea
+spec/app/cassettes
