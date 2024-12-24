@@ -7,5 +7,3 @@ config/settings/*.local.yml
 # Ignore test-related files
 coverage/
 spec/examples.txt
-.idea
-spec/app/cassettes

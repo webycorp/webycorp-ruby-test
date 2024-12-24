@@ -23,7 +23,7 @@ GEM
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.1.0)
-    dry-initializer (3.1.1)
+    dry-initializer (3.0.4)
     dry-logic (1.5.0)
       concurrent-ruby (~> 1.0)
       dry-core (~> 1.0, < 2)
@@ -160,6 +160,7 @@ PLATFORMS
 
 DEPENDENCIES
   config (~> 3.1)
+  dry-initializer (~> 3.0.3)
   faraday (~> 1.8)
   faraday_middleware (~> 1.2)
   ougai (~> 1.9.1)

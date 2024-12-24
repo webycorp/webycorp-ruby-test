@@ -1,22 +1,18 @@
 # frozen_string_literal: true
+require_relative '../../../config/basic_script'
 
 module Scripts
   module Stripe
     # Handles creation of Stripe invoices from FakeStore API data
     # rubocop:disable Metrics/ClassLength
-    class CreateInvoiceStripeScript
-      # Initialize with configuration and setup logging
-      def initialize
-        @logger = Logger.new($stdout)
-        @logger.level = Logger::INFO
-        configure_stripe
-        @fakestore_client = FakestoreApiService::Client.new(@logger)
-        # rubocop:enable Metrics/ClassLength
-      end
 
+    class CreateInvoiceStripeScript
+      prepend BasicScript
       # Main call method
       # rubocop:disable Metrics/MethodLength
       def call
+        @fakestore_client = FakestoreApiService::Client.new
+        configure_stripe
         carts_with_users = fetch_carts_with_users
         create_customers(carts_with_users)
         products_data = fetch_products_data(carts_with_users)
@@ -26,7 +22,7 @@ module Scripts
         link_invoice_items_to_invoices(carts_with_users, invoices)
         finalize_invoices(invoices)
       rescue StandardError => e
-        @logger.error("Failed to execute script: #{e.message}")
+        stripe_script_logger.error("Failed to execute script: #{e.message}")
         raise
       end
       # rubocop:enable Metrics/MethodLength
@@ -36,26 +32,15 @@ module Scripts
       # Configure Stripe API client
       def configure_stripe
         ::Stripe.api_key = Settings.stripe.api_key
-        @logger.info('Configured Stripe with API key')
+        stripe_script_logger.info('Configured Stripe with API key')
       rescue StandardError => e
-        @logger.error("Failed to configure Stripe: #{e.message}")
+        stripe_script_logger.error("Failed to configure Stripe: #{e.message}")
         raise
-      end
-
-      # Configure FakeStore API client
-      def configure_fakestore_client
-        @client = Faraday.new(
-          url: 'https://fakestoreapi.com',
-          headers: { 'Content-Type' => 'application/json' },
-          ssl: { verify: false }
-        ) do |f|
-          f.response :json
-        end
       end
 
       # Fetch carts and merge with user data
       def fetch_carts_with_users
-        @logger.info('Fetching carts from FakeStore API')
+        stripe_script_logger.info('Fetching carts from FakeStore API')
         response = @fakestore_client.request_get_carts
         carts = response.body
 
@@ -73,7 +58,7 @@ module Scripts
 
       # Create Stripe customers from cart data
       def create_customers(carts)
-        @logger.info('Creating Stripe customers')
+        stripe_script_logger.info('Creating Stripe customers')
         carts.each do |cart|
           create_customer(cart)
         end
@@ -93,14 +78,14 @@ module Scripts
           }
         )
       rescue ::Stripe::StripeError => e
-        @logger.error("Failed to create customer: #{e.message}")
+        stripe_script_logger.error("Failed to create customer: #{e.message}")
         raise
         # rubocop:enable Metrics/MethodLength
       end
 
       # Fetch product data for all products in carts
       def fetch_products_data(carts)
-        @logger.info('Fetching product data')
+        stripe_script_logger.info('Fetching product data')
         product_ids = carts.flat_map { |cart| cart['products'].map { |p| p['productId'] } }.uniq
         product_ids.each_with_object({}) do |product_id, products|
           response = @fakestore_client.request_get_product(product_id)
@@ -110,7 +95,7 @@ module Scripts
 
       # Create Stripe products and their prices
       def create_stripe_products_and_prices(products_data)
-        @logger.info('Creating Stripe products and prices')
+        stripe_script_logger.info('Creating Stripe products and prices')
         products_data.each_value do |product|
           stripe_product = create_stripe_product(product)
           create_stripe_price(product, stripe_product.id)
@@ -127,7 +112,7 @@ module Scripts
           }
         )
       rescue ::Stripe::StripeError => e
-        @logger.error("Failed to create product: #{e.message}")
+        stripe_script_logger.error("Failed to create product: #{e.message}")
         raise
       end
 
@@ -143,14 +128,14 @@ module Scripts
           }
         )
       rescue ::Stripe::StripeError => e
-        @logger.error("Failed to create price: #{e.message}")
+        stripe_script_logger.error("Failed to create price: #{e.message}")
         raise
         # rubocop:enable Metrics/MethodLength
       end
 
       # Create invoice items for all carts
       def create_invoice_items(carts)
-        @logger.info('Creating invoice items')
+        stripe_script_logger.info('Creating invoice items')
         carts.each do |cart|
           create_cart_invoice_items(cart)
         end
@@ -173,14 +158,14 @@ module Scripts
           )
         end
       rescue ::Stripe::StripeError => e
-        @logger.error("Failed to create invoice items: #{e.message}")
+        stripe_script_logger.error("Failed to create invoice items: #{e.message}")
         raise
         # rubocop:enable Metrics/MethodLength
       end
 
       # Create draft invoices for all carts
       def create_invoices(carts)
-        @logger.info('Creating draft invoices')
+        stripe_script_logger.info('Creating draft invoices')
         carts.map do |cart|
           create_draft_invoice(cart)
         end
@@ -199,7 +184,7 @@ module Scripts
           }
         )
       rescue ::Stripe::StripeError => e
-        @logger.error("Failed to create invoice: #{e.message}")
+        stripe_script_logger.error("Failed to create invoice: #{e.message}")
         raise
         # rubocop:enable Metrics/MethodLength
       end
@@ -208,7 +193,7 @@ module Scripts
       # rubocop:disable Metrics/MethodLength
       # rubocop:disable Metrics/AbcSize
       def link_invoice_items_to_invoices(carts, invoices)
-        @logger.info('Linking invoice items to invoices')
+        stripe_script_logger.info('Linking invoice items to invoices')
 
         carts.zip(invoices).each do |cart, invoice|
           invoice_items = find_invoice_items_by_customer(
@@ -226,9 +211,9 @@ module Scripts
                 }
               )
             end
-            @logger.info("Successfully linked items to invoice #{invoice.id}")
+            stripe_script_logger.info("Successfully linked items to invoice #{invoice.id}")
           rescue ::Stripe::StripeError => e
-            @logger.error("Failed to link invoice items to invoice #{invoice.id}: #{e.message}")
+            stripe_script_logger.error("Failed to link invoice items to invoice #{invoice.id}: #{e.message}")
             raise
             # rubocop:enable Metrics/AbcSize
             # rubocop:enable Metrics/MethodLength
@@ -238,13 +223,13 @@ module Scripts
 
       # Method to finalize invoices
       def finalize_invoices(invoices)
-        @logger.info('Finalizing invoices')
+        stripe_script_logger.info('Finalizing invoices')
 
         invoices.each do |invoice|
           ::Stripe::Invoice.finalize_invoice(invoice.id)
-          @logger.info("Successfully finalized invoice #{invoice.id}")
+          stripe_script_logger.info("Successfully finalized invoice #{invoice.id}")
         rescue ::Stripe::StripeError => e
-          @logger.error("Failed to finalize invoice #{invoice.id}: #{e.message}")
+          stripe_script_logger.error("Failed to finalize invoice #{invoice.id}: #{e.message}")
           raise
         end
       end

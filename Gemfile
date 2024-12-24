@@ -19,6 +19,8 @@ gem 'faraday_middleware', '~> 1.2'
 
 gem 'stripe', '~> 13.2'
 
+gem 'dry-initializer', '~> 3.0.3'
+
 group :test do
   gem 'rspec', '~> 3.10'
   gem 'simplecov', '~> 0.21.2', require: false
