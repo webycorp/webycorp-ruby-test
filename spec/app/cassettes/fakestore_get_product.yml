@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://fakestoreapi.com/products/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 19 Dec 2024 14:42:08 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"16c-MMdrqY6N0sTiefLdsgtBej9eunY"
+      x-powered-by:
+      - Express
+      cf-cache-status:
+      - DYNAMIC
+      report-to:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=MBQWNIsmuFis2eQocnxynTq1fV5uzBoQEOft3mFt7x3VAIy%2B9JM3XrWrJj5U1XQyTuCJNcxJORFnsPSXKfbl2Z%2FEwu1TlijKDPtzcQ7iyKPD%2BmTjdMIJc7zIYs8nHd3r5V8v"}],"group":"cf-nel","max_age":604800}'
+      nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      server:
+      - cloudflare
+      cf-ray:
+      - 8f482852df0b15c3-EWR
+      alt-svc:
+      - h3=":443"; ma=86400
+      server-timing:
+      - cfL4;desc="?proto=TCP&rtt=108693&min_rtt=108485&rtt_var=30873&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2806&recv_bytes=797&delivery_rate=35024&cwnd=252&unsent_bytes=0&cid=8b993da8c25ccda1&ts=271&x=0"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1,"title":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops","price":109.95,"description":"Your
+        perfect pack for everyday use and walks in the forest. Stash your laptop (up
+        to 15 inches) in the padded sleeve, your everyday","category":"men''s clothing","image":"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg","rating":{"rate":3.9,"count":120}}'
+  recorded_at: Thu, 19 Dec 2024 14:42:08 GMT
+recorded_with: VCR 6.2.0
